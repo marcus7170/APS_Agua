@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal de conscientização sobre o uso responsável da água">
+  <title>💧 Água: Preservar Hoje para Garantir o Amanhã</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <!-- Cabeçalho com Dark Mode -->
+  <header class="header">
+    <h1>💧 Água: Preservar Hoje para Garantir o Amanhã</h1>
+    <button id="dark-toggle" aria-label="Alternar modo claro/escuro">🌓</button>
+    <nav aria-label="Menu principal">
+      <a href="#crise">Crise Hídrica</a>
+      <a href="#dicas">Dicas</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#impacto">Impacto</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="intro" class="hero">
+    <img src="static/images/banner.jpeg" alt="Torneira pingando água" class="hero-img">
+    <div class="hero-text">
+      <p>40% da população mundial sofre com escassez de água.</p>
+      <a href="#calculadora" class="btn">Calcule Seu Consumo</a>
+    </div>
+  </section>
+
+  <!-- Crise Hídrica -->
+  <section id="crise" class="section">
+    <h2>🌍 Crise Hídrica Global</h2>
+    <div class="grid">
+      <!-- Dados Alarmantes -->
+      <div class="card">
+        <h3>📊 Dados Alarmantes</h3>
+        <div class="dados-categoria">
+          <h4>💧 Desperdício Doméstico</h4>
+          <ul>
+            <li><strong>Vazamentos residenciais:</strong> Perdem até 20% do abastecimento urbano global (ONU Água).</li>
+            <li><strong>Banho de 15 min:</strong> 135 L = consumo diário recomendado para 3 pessoas pela OMS.</li>
+            <li><strong>Lavar calçadas com mangueira:</strong> Gasta 280 L em 15 minutos (ANA).</li>
+          </ul>
+        </div>
+        <div class="dados-categoria">
+          <h4>🌾 Impacto Agrícola</h4>
+          <ul>
+            <li><strong>Irrigação ineficiente:</strong> 60% da água se perde por evaporação antes de chegar às plantas.</li>
+            <li><strong>Algodão (1 camiseta):</strong> 2.700 L de água na produção.</li>
+            <li><strong>Arroz (1 kg):</strong> 2.500 L vs trigo (1.300 L).</li>
+          </ul>
+        </div>
+        <div class="dados-categoria">
+          <h4>⚠️ Cenário Futuro</h4>
+          <ul>
+            <li><strong>2030:</strong> Déficit hídrico global de 40%.</li>
+            <li><strong>Cidades em risco:</strong> São Paulo, Cidade do Cabo e Chennai já enfrentaram "Dia Zero".</li>
+            <li><strong>Conflitos:</strong> 700 disputas por água registradas no século XXI.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Mapa -->
+      <div class="card">
+        <h3>🗺️ Mapa de Estresse Hídrico</h3>
+        <img src="static/images/mapa.png" alt="Mapa de estresse hídrico" class="mapa-img">
+        <div class="legenda-mapa">
+          <p><strong>Classificação por cores:</strong></p>
+          <ul>
+            <li><span class="cor-alto"></span> Alto estresse: Nordeste.</li>
+            <li><span class="cor-medio"></span> Médio estresse: Centro e Sul.</li>
+            <li><span class="cor-baixo"></span> Baixo estresse: Norte.</li>
+          </ul>
+        </div>
+        <div class="fonte-dados">
+          <p>Foto Crédito: WRI Brasil | Dados por bacias hidrográficas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dicas Práticas -->
+  <section id="dicas" class="section dark">
+    <h2>💡 Dicas Práticas</h2>
+    <div class="dicas-container">
+      <!-- Dicas unchanged -->
+      <div class="dica">
+        <img src="https://img.icons8.com/fluency/96/shower-and-tub.png" alt="Reduza o tempo de banho">
+        <div class="dica-text">
+          <h4>Banhos Curtos</h4>
+          <p>5 minutos podem economizar até <strong>25 L</strong> por dia.</p>
+        </div>
+      </div>
+      <div class="dica">
+        <img src="https://img.icons8.com/fluency/96/rain.png" alt="Captação de água da chuva">
+        <div class="dica-text">
+          <h4>Água da Chuva</h4>
+          <p>Cisternas domésticas reduzem o uso de água potável em até <strong>30%</strong>.</p>
+        </div>
+      </div>
+      <div class="dica">
+        <img src="https://img.icons8.com/?size=100&id=Tf1TY05QlkzX&format=png&color=000000" alt="Conserto de vazamentos">
+        <div class="dica-text">
+          <h4>Conserte Vazamentos</h4>
+          <p>Um vazamento contínuo pode desperdiçar mais de <strong>1.000 L</strong>/mês.</p>
+        </div>
+      </div>
+      <div class="dica">
+        <img src="https://img.icons8.com/fluency/96/washing-machine.png" alt="Uso de carga completa">
+        <div class="dica-text">
+          <h4>Use Carga Completa</h4>
+          <p>Máquinas com carga total economizam até <strong>50%</strong> de água por ciclo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculadora Avançada -->
+  <section id="calculadora" class="section">
+    <h2>🔢 Calculadora de Consumo Avançada</h2>
+    <form class="calculator" aria-labelledby="calculadora">
+      <div class="calc-field">
+        <img src="https://img.icons8.com/?size=100&id=oF6kXhz1RhMo&format=png&color=000000"
+             alt="Banho" class="calc-icon">
+        <label for="banho">Minutos diários no banho:</label>
+        <input type="number" id="banho" min="0" value="10"
+               aria-label="Minutos diários no banho">
+      </div>
+      <div class="calc-field">
+        <img src="https://img.icons8.com/?size=100&id=122653&format=png&color=000000"
+             alt="Roupas" class="calc-icon">
+        <label for="roupa">Ciclos mensais de máquina de lavar roupa:</label>
+        <input type="number" id="roupa" min="0" value="5"
+               aria-label="Ciclos mensais de máquina de lavar roupa">
+      </div>
+      <div class="calc-field">
+        <img src="https://img.icons8.com/?size=100&id=nXJXu4jJE5SR&format=png&color=000000"
+             alt="Louça" class="calc-icon">
+        <label for="louca">Ciclos mensais de lava‑louças:</label>
+        <input type="number" id="louca" min="0" value="10"
+               aria-label="Ciclos mensais de lava‑louças">
+      </div>
+      <div class="calc-field">
+        <img src="https://img.icons8.com/?size=100&id=24467&format=png&color=000000"
+             alt="Arroz" class="calc-icon">
+        <label for="arroz">Quilos de arroz por mês:</label>
+        <input type="number" id="arroz" min="0" value="2"
+               aria-label="Quilos de arroz por mês">
+      </div>
+      <div class="calc-field">
+        <img src="https://img.icons8.com/?size=100&id=12860&format=png&color=000000"
+             alt="Café" class="calc-icon">
+        <label for="cafe">Xícaras de café por dia:</label>
+        <input type="number" id="cafe" min="0" value="2"
+               aria-label="Xícaras de café por dia">
+      </div>
+      <button type="button" onclick="calcular()" class="btn">Calcular</button>
+      <div id="resultado" aria-live="polite"></div>
+    </form>
+  </section>
+
+
+  <!-- Quiz Interativo -->
+  <section id="quiz" class="section">
+    <h2>❓ Quiz Interativo</h2>
+    <div id="quiz-container" class="quiz" aria-live="polite">
+      <!-- Progresso -->
+      <div class="quiz-progress">
+        <span id="current-question">1</span>/<span id="total-questions">3</span>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+  
+      <!-- Perguntas serão inseridas via JavaScript -->
+    </div>
+    <button id="restart-quiz" class="btn" hidden>Refazer Quiz</button>
+  </section>
+
+  <!-- Impacto -->
+  <section id="impacto" class="section infografico">
+    <h2>📈 Impacto do Consumo Consciente</h2>
+    <div class="impacto-cards">
+      <div class="impacto-card">
+        <img src="https://img.icons8.com/?size=100&id=32654&format=png&color=000000" alt="Redução de consumo">
+        <h4>Redução de até 20%</h4>
+        <p>Diminua sua conta mensal e o desperdício diário.</p>
+      </div>
+      <div class="impacto-card">
+        <img src="https://img.icons8.com/?size=100&id=9peTLPFf4B4y&format=png&color=000000" alt="Litros economizados">
+        <h4>50.000 L Economizados</h4>
+        <p>Equivalem a mais de 10 famílias por um mês.</p>
+      </div>
+      <div class="impacto-card">
+        <img src="https://img.icons8.com/fluency/96/forest.png" alt="Áreas preservadas">
+        <h4>+1.000 ha Preservados</h4>
+        <p>Contribuição direta à conservação de mananciais.</p>
+      </div>
+    </div>
+    <a href="#calculadora" class="btn">Ver Sua Economia</a>
+  </section>
+
+  <!-- Rodapé -->
+  <footer id="contato" class="footer dark">
+    <div class="footer-content">
+      <div class="brand">
+        <h3>Consumo Consciente</h3>
+        <p>Por um futuro sustentável.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegação no rodapé">
+        <a href="#intro">Início</a>
+        <a href="#crise">Crise</a>
+        <a href="#dicas">Dicas</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#impacto">Impacto</a>
+      </nav>
+      <div class="contact">
+        <p>Email: <a href="mailto:contato@consumoconsciente.com">contato@consumoconsciente.com</a></p>
+        <div class="social">
+          <a href="#"><img src="https://img.icons8.com/?size=100&id=118467&format=png&color=000000" alt="Facebook"></a>
+          <a href="#"><img src="https://img.icons8.com/?size=100&id=32309&format=png&color=000000" alt="Instagram"></a>
+          <a href="#"><img src="https://img.icons8.com/?size=100&id=30888&format=png&color=000000" alt="Discord"></a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Consumo Consciente - UNIP CC. Marcus & Matheus & Ruan & Natan</p>
+  </footer>
+
+  <script src="static/javascript.js"></script>
+</body>
+</html>
