@@ -7,7 +7,7 @@
     --text-color: #333;
   }
   
-  /* Dark mode overrides */
+  /* Dark mode */
   body.dark-mode {
     --fundo-claro: #121212;
     --text-color: #ddd;
@@ -37,7 +37,7 @@
     padding: 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
     z-index: 1000;
   }
   .header h1 {
@@ -299,10 +299,18 @@
   .footer-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 1rem;
   }
+  .centraliza{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
   .footer-nav a {
     display: block;
     margin-bottom: 0.5rem;
@@ -350,3 +358,120 @@
     margin-top: 1rem;
     animation: fadeIn 0.5s;
   }
+
+  /* Menu styles */
+.side-menu {
+  background-color: #333;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  padding: 15px 25px;
+  transition: 0.3s;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.side-menu .item {
+  display: block;
+  color: #fff;
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  transition: 0.3s;
+}
+
+.side-menu .item:hover {
+  background-color: white;
+  color: #333;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.page-wrapper {
+  margin-left: 0;
+  transition: 0.3s;
+}
+
+.page-wrapper.menu-active {
+  margin-left: 260px;
+}
+
+/* Botão de fechar */
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 8px;
+  transition: 0.3s;
+}
+
+.close-menu:hover {
+  color: #ff4757;
+  transform: scale(1.2);
+}
+
+/* Ajuste de posicionamento */
+.side-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botão Voltar ao Topo */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--azul);
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.back-to-top.show {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Dark mode botão */
+body.dark-mode .back-to-top {
+  background: var(--verde);
+  color: var(--cinza);
+}
